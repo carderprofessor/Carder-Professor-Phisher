@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Offer Letter Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; padding: 20px; border: 1px solid #ccc; }
+        h1 { text-align: center; color: #333; }
+        .offer-details { margin-top: 30px; }
+        .offer-details div { margin-bottom: 10px; }
+        .offer-details label { font-weight: bold; display: inline-block; width: 150px; }
+        .offer-details input[type="text"], .offer-details textarea { width: calc(100% - 160px); padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        .offer-details textarea { height: 100px; resize: vertical; }
+        .button-container { text-align: center; margin-top: 20px; }
+        .button-container button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .button-container button:hover { background-color: #0056b3; }
+        .controls { display: none; /* This will be hidden in preview */ }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Professional Offer Letter</h1>
+        <div class="offer-details">
+            <div>
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" value="Carderprofessor Inc.">
+            </div>
+            <div>
+                <label for="applicantName">Applicant Name:</label>
+                <input type="text" id="applicantName" value="John Doe">
+            </div>
+            <div>
+                <label for="position">Position:</label>
+                <input type="text" id="position" value="Software Engineer">
+            </div>
+            <div>
+                <label for="salary">Annual Salary:</label>
+                <input type="text" id="salary" value="$100,000">
+            </div>
+            <div>
+                <label for="startDate">Start Date:</label>
+                <input type="text" id="startDate" value="January 15, 2026">
+            </div>
+            <div>
+                <label for="body">Letter Body:</label>
+                <textarea id="body">Dear John Doe,
+
+We are pleased to offer you the position of Software Engineer at Carderprofessor Inc. Your dedication and expertise will be a valuable asset to our team.
+
+Your annual salary will be $100,000, with a start date of January 15, 2026.
+
+We look forward to welcoming you to our team.
+
+Sincerely,
+The Hiring Team</textarea>
+            </div>
+        </div>
+        <div class="button-container controls">
+            <button onclick="generateLetter()">Generate Offer Letter</button>
+            <button onclick="window.print()">Save as PDF</button>
+        </div>
+    </div>
+
+    <script>
+        function generateLetter() {
+            // In a real application, this would dynamically update the letter content
+            alert('Offer letter generated!');
+        }
+    </script>
+</body>
+</html>
