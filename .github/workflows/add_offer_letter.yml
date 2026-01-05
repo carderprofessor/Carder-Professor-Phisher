@@ -1,0 +1,16 @@
+name: Add Offer Letter
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  add-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create file
+        run: echo "This is the offer letter content." > tools/offer_letter_generator.html
+      - name: Display file content
+        run: cat tools/offer_letter_generator.html
